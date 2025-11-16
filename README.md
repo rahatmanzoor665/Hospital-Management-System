@@ -87,15 +87,12 @@ DB_CONFIG = {
 python hospital_app.py
 The Tkinter GUI will launch.
 
-# Screenshots
-You can add your screenshots here:
-![Login Page](assets/login.png)
-![Dashboard](assets/dashboard.png)
-Default Admin Credentials
-Username	Password
-admin	12345
+# Default Admin Credentials
+Username="admin"
+Password = 12345
 You can change this later in the MySQL database.
-Contribution
+
+# Contribution
 Contributions are welcome!
 Fork the repository
 Create a new branch
