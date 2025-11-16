@@ -235,20 +235,20 @@ class PatientsFrame(ttk.Frame):
             for k in data:
                 if data[k] == '':
                     data[k] = None
-                    q = """INSERT INTO patients (full_name, gender, dob, age, phone, address, disease, admit_date, discharge_date, doctor_id, room_id)
-                        VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
-                    params =(
-                        data['full_name'],
-                        data['gender'],
-                        data['dob'],
-                        data['age'],
-                        data['phone'],
-                        data['address'],
-                        data['disease'],
-                        data['admit_date'],
-                        data['discharge_date'],
-                        data['doctor_id'],
-                        data['room_id'])
+            q = """INSERT INTO patients (full_name, gender, dob, age, phone, address, disease, admit_date, discharge_date, doctor_id, room_id)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"""
+            params =(
+                data['full_name'],
+                data['gender'],
+                data['dob'],
+                data['age'],
+                data['phone'],
+                data['address'],
+                data['disease'],
+                data['admit_date'],
+                data['discharge_date'],
+                data['doctor_id'],
+                data['room_id'])
             ok = self.run_query(q, params)
             if ok:
                 messagebox.showinfo("Success", "Patient added")
@@ -774,3 +774,4 @@ if __name__ == "__main__":
     ensure_admin_exists()
     app = HospitalApp()
     app.mainloop()
+
